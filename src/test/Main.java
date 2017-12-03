@@ -7,16 +7,19 @@ import file.FileHandle;
 
 public class Main {
 	public static void main(String[] args) {
-		String filePath = "C:\\Users\\gzq\\Desktop\\d\\MG1733018.txt";
+		String filePath = "C:\\Users\\naplues\\Desktop\\d\\MG1733018.txt";
 		List<String> strings = FileHandle.readFileToLines(filePath);
 
 		List<String> newString = handle(strings);
 		FileHandle.writeLinesToFile(filePath, newString, false);
 
-		String ans = "BCCBBDBADDDDCACBBBACBCDAA";  //25
-		ans += "ADBACDBCDAB";                      //11
-		ans += "CCADADCBCBBABCBBCBDC";             //20
-		ans += "";    //
+		String ans = "BCCBBDBADDDDCACBBBAC";         //20
+			  ans += "BCDAAADBACDBCDABCCAD";         //20
+			  ans += "ADCCCBBABCBBCBDCBBAC";         //20
+			  ans += "CBABCDBBDADDAABCBBCD";         //20
+			  ans += "ABBBCBDADBACBCBDDBBC";         //20
+			  ans += "DBDBCAACBABDDACBDACB";         //20
+
 		newString = modify(newString, ans);
 		print(newString);
 	}
