@@ -74,7 +74,7 @@ public class FileHandle {
 			if (a.length == 1) {
 				append = a[0];
 			}
-			FileWriter fileWritter = new FileWriter(file.getName(), append);
+			FileWriter fileWritter = new FileWriter(file, append);
 			BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
 			bufferWritter.write(data);
 			bufferWritter.close();
